@@ -1,0 +1,91 @@
+---
+title: Send SMS
+---
+
+## Introduction
+The SMS Action feature allows your AI Agent to send text messages during or after phone calls. This guide covers everything you need to know about configuring and using SMS functionality effectively.
+
+
+<Note>
+Your account must have an active phone number to use SMS Actions - all messages will be sent from this number.
+</Note>
+
+
+## Quick Start
+1. Go to Agent's actions section
+2. Click "Add action"
+3. Select "Send SMS"
+4. Configure recipient and message settings
+5. Save your configuration
+
+## Core Features
+- Send SMS during active calls
+- Send SMS after call completion
+- Manage sender number
+- Use dynamic variables in messages
+- Support for both inbound and outbound calls
+
+## Configuration Guide
+
+### Setting Up Recipients
+You can send SMS to either:
+- **Caller's/Contact's Number**: Automatically uses the caller's phone number (Phone Calls only)
+- **Custom Number**: Manually specified phone number
+
+### Phone Number Format
+All numbers must use E.164 format:
+```
++(country code)(phone number)
+Example: +12512500508
+```
+- Plus sign (+) is required
+- US/Canada country code is 1
+- Currently supports USA/Canada numbers only
+
+### Message Content Guidelines
+
+### Character Limits
+- 160 characters per SMS segment
+- Longer messages split automatically
+- Messages sent in sequence
+
+
+### Using Variables
+1. Access variables menu with "/" (Slash Command)
+2. Select desired variable
+3. Test variable rendering before deployment
+
+
+## Troubleshooting Guide
+
+
+### SMS Not Sending
+- Check phone number format
+- Confirm action configuration
+- Review slash command syntax
+
+### Variable Problems
+- Verify variable names
+- Check data availability
+
+### Technical Limitations
+1. 160-character SMS segments
+2. Text to USA/Canada only for TruFlow numbers
+3. Some variables only available post-call
+4. Imported numbers are subject to limitations from their original platform
+5. E.164 format required
+
+## Best Practices
+
+### Message Design
+- Keep messages concise
+- Use clear, action-oriented language
+- Include essential information only
+- Test with various scenarios
+
+### Implementation Tips
+1. Test thoroughly in controlled environment
+2. Document custom configurations
+3. Regular content reviews
+4. Monitor delivery success rates
+5. Keep updated with feature changes

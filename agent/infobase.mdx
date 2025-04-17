@@ -1,0 +1,66 @@
+---
+title: Infobase 
+---
+
+Infobase is your integrated knowledge repository within TruFlow, designed to store and manage all the information your team needs—ranging from customer support documents to product guides, technical specifications, and beyond. With Infobase, you can seamlessly upload, organize, and keep your content accessible and searchable in one centralized location.
+
+<video
+  controls
+  className="w-full aspect-video"
+  src="/images/agent/infobase.mp4"
+></video>
+
+### Why Use Infobase?
+
+In a busy workflow environment, quickly finding the right information can significantly reduce back-and-forth communication and repetitive manual searches. Infobase provides:
+
+- **Unified Source of Truth:** Consolidate all your essential documents in one place.
+- **Streamlined Collaboration:** Give your team a single location to reference, update, and discover critical information.
+- **Scalable Organization:** Easily navigate and maintain large volumes of content through intuitive structuring and search.
+
+
+### How it works
+You can create knowledge bases, and link them to your agents. When a knowledge base is linked to an agent, the agent will always try to retrieve information from the knowledge base before responding. There’s no need to change your prompt for it to trigger, as it will be done automatically, for every response generation.
+
+During the creation of knowledge bases, it will chunk the source, embed them and store into a vector database.
+
+During the call, when the agent is about to respond, it will use the transcript so far (prompt is not included) to find the most relevant chunks from the knowledge base, and feed them to the LLM as context.
+
+
+### Supported Formats
+
+Infobase supports a variety of file types, enabling you to capture a broad range of content:
+
+
+- Website content (via URLs)
+- Files :  .bmp, .csv, .doc, .docx, .eml, .epub, .heic, .html, .jpeg, .png, .md, .msg, .odt, .org, .p7s, .pdf, .png, .ppt, .pptx, .rst, .rtf, .tiff, .txt, .tsv, .xls, .xlsx, .xml
+
+- Custom text snippets
+
+
+
+
+### FAQs
+<AccordionGroup>
+
+<Accordion title="Do I need to change my prompt to use knowledge base?">
+No, you don’t need to change your prompt. It will be used automatically when added to an agent.
+</Accordion>
+
+<Accordion title="The agent response is not correct, what should I do?">
+Please check the knowledge base documents to see if the information is correct. Also, verify that the source follows the recommended format, such as using markdown with clear paragraphs.
+</Accordion>
+
+<Accordion title="Will this add a long latency to the call?">
+We’ve optimized Knowledge Base retrieval latency for real-time use cases, so it should generally add less than 100ms of latency.
+</Accordion>
+
+<Accordion title="Is there a way to check what's getting retrieved from the knowledge base?">
+We’re working on adding this feature soon, so you’ll be able to see what information is being retrieved.
+</Accordion>
+
+<Accordion title="Will the knowledge base name influence the retrieval?">
+No, the name is only for display purposes and does not affect retrieval.
+</Accordion>
+
+</AccordionGroup>
