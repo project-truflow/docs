@@ -1,0 +1,96 @@
+---
+title: Transfer Call
+---
+
+## Overview
+
+This guide explains how to set up call transfer functionality in the AI Agent system, enabling both cold and warm transfers to human agents or other numbers.
+
+## Types of Call Transfers
+
+### Cold Transfer (Blind Transfer)
+- Immediately redirects the caller without introduction
+- Suitable for simple redirections and high-volume environments
+- No context sharing with receiving agent
+
+### Warm Transfer (Announced Transfer)
+- Includes briefing the receiving agent before connecting
+- Better for complex issues and VIP customers
+- Preserves conversation context
+
+
+<Info>All call recordings and transcription will end once the call is transferred.</Info>
+
+<video
+  controls
+  className="w-full aspect-video"
+  src="/images/actions/transfer_call.mp4"
+></video>
+
+## Configuration Steps
+
+### 1. Access Actions Menu
+1. Navigate to the AI Agent section
+2. Locate and click on the **"Actions"** tab
+3. This will display the current list of available actions
+
+### 2. Create New Transfer Action
+1. Click the **"Add Action"** button
+2. From the dropdown menu, select **"Transfer call"**
+
+### 3. Configure Transfer Settings
+
+#### Enter Action Details
+1. Provide a descriptive name (e.g., "Transfer to Support")
+2. Input the destination phone number in E.164 format:
+   - Structure: `+(country code)(number)`
+   - Example: `+12512500508`
+
+#### When Should the Transfer Happen?
+- Define specific conditions and situations for transfer
+- Examples:
+  - "Transfer when customer explicitly asks for human agent"
+  - "Transfer if customer mentions technical issues with login"
+  - "Transfer if customer shows signs of frustration"
+  - "Transfer for billing disputes over $500"
+
+#### Delay Settings
+- Configure artificial delay before transfer
+- Allows AI to complete farewell message
+- Recommended: 2-3 seconds for natural conversation flow
+
+#### Select Transfer Type
+
+##### Option 1: Cold Transfer
+- Configure "Speak during transfer" message
+- Example messages:
+  - "Please hold while I transfer you to our support team"
+  - "I'm connecting you with a specialist. One moment please"
+  - "Transferring you now, please stay on the line"
+
+##### Option 2: Warm Transfer
+- Configure AI briefing instructions
+- Example briefing format:
+  - "Customer name and account details"
+  - "Brief summary of the issue discussed"
+  - "Any relevant account history or context"
+  - "Reason for transfer"
+  - "Actions already taken by AI"
+
+### 4. Save Configuration
+- Review all settings
+- Click "Add Action" to save
+- Test transfer flow in sandbox environment
+
+## Best Practices
+- Keep transfer conditions specific and measurable
+- Use clear, professional transfer messages
+- Set appropriate delays for natural conversation
+- For warm transfers, keep briefings concise but informative
+- Regular testing of transfer flows
+
+## Tips
+- Update transfer conditions based on customer feedback
+- Monitor transfer success rates
+- Maintain backup transfer options
+- Regularly review and update transfer messages
